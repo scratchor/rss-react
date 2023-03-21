@@ -1,19 +1,26 @@
-import "./App.css";
+import React, { Component } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import React, { Component } from "react";
-import Home from "./pages/Home";
+import "./App.css";
+
+import NavBar from "./components/NavBar/NavBar";
+import Main from "./pages/Main";
 import NotFound from "./pages/NotFound";
+import About from "./pages/About";
 
 class App extends Component {
   render() {
     return (
       <>
         <BrowserRouter>
-          <Routes>
-            <Route path={"/"} element={<Home />} />
-            <Route path={"*"} element={<NotFound />} />
-          </Routes>
+          <NavBar />
+          <main>
+            <Routes>
+              <Route path={"/"} element={<Main />} />
+              <Route path={"/about"} element={<About />} />
+              <Route path={"*"} element={<NotFound />} />
+            </Routes>
+          </main>
         </BrowserRouter>
       </>
     );
