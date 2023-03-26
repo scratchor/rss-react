@@ -51,7 +51,9 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="nojreferrer noreferrer"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -62,14 +64,9 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            <a
-              className="logo-wrapper"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="nojreferrer noreferrer"
-            >
+            <div className="logo-wrapper">
               <img src={reactLogo} className="logo react" alt="React logo" />
-            </a>
+            </div>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -118,7 +115,9 @@ function ResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="https://reactjs.org"
+            target="_blank"
+            rel="nojreferrer noreferrer"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -130,14 +129,9 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            <a
-              className="logo-wrapper"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="nojreferrer noreferrer"
-            >
+            <div className="logo-wrapper">
               <img src={reactLogo} className="logo react" alt="React logo" />
-            </a>
+            </div>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
