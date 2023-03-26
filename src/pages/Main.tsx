@@ -1,15 +1,37 @@
 import React, { Component } from "react";
+import WithLocalPersistence from "../HOCs/WithLocalPersistence/WithLocalPersistence";
+import SearchBar from "../components/SearchBar/SearchBar";
+import { InjectedProps } from "../HOCs/WithLocalPersistence/WithLocalPersistence";
+import CardsContainer from "../components/CardsContainer/CardsContainer";
 
-type StateProps = {
-  count: number;
+import { products } from "../data.json";
+
+type MainState = {
+  value: string;
 };
-class Main extends Component<Record<string, never>, StateProps> {
-  state: StateProps = {
-    count: 0,
+
+class Main extends Component<InjectedProps, MainState> {
+  state: MainState = {
+    value: this.props.initialValue,
   };
+
+  componentWillUnmount() {
+    this.props.setValue(this.state.value);
+  }
+
   render() {
-    return <div className="main"></div>;
+    return (
+      <main className="main">
+        <SearchBar
+          inputValue={this.state.value}
+          placeholder={"What do you want to find"}
+          handleInput={(e) => this.setState({ value: e.target.value })}
+        ></SearchBar>
+        <CardsContainer products={products} />
+      </main>
+    );
   }
 }
 
-export default Main;
+const MainWithPersistence = WithLocalPersistence(Main);
+export default MainWithPersistence;
