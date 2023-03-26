@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar/NavBar";
 import MainWithPersistence from "./pages/Main";
 import NotFound from "./pages/NotFound";
 import About from "./pages/About";
+import Forms from "./pages/Forms";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             element={<MainWithPersistence storageKey={"storageValue"} />}
           />
           <Route path={"/about"} element={<About />} />
+          <Route path={"/forms"} element={<Forms />} />
           <Route path={"*"} element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -27,6 +27,12 @@ body {
   text-align: center;
 }
 
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
 .not-found-img {
   height: 50vh;
   padding: 1.5em;
