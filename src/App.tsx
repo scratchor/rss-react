@@ -4,10 +4,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 import NavBar from "./components/NavBar/NavBar";
-import MainWithPersistence from "./pages/Main";
-import NotFound from "./pages/NotFound";
-import About from "./pages/About";
-import Forms from "./pages/Forms";
+import MainWithPersistence from "./pages/Main/Main";
+import NotFound from "./pages/NotFound/NotFound";
+import About from "./pages/About/About";
+import Form from "./pages/Forms/Form";
 
 class App extends Component {
   render() {
@@ -20,7 +20,7 @@ class App extends Component {
             element={<MainWithPersistence storageKey={"storageValue"} />}
           />
           <Route path={"/about"} element={<About />} />
-          <Route path={"/forms"} element={<Forms />} />
+          <Route path={"/forms"} element={<Form />} />
           <Route path={"*"} element={<NotFound />} />
         </Routes>
       </BrowserRouter>

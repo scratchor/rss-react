@@ -1,0 +1,44 @@
+fieldset {
+  background-color: #eeeeee;
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+
+label {
+  margin: auto;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  height: 20px;
+  width: 300px;
+  margin: 10px;
+  padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  label {
+    width: 400px;
+  }
+
+  input {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  label {
+    width: 350px;
+  }
+
+  input {
+    width: 200px;
+  }
+}

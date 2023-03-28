@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import WithLocalPersistence from "../HOCs/WithLocalPersistence/WithLocalPersistence";
-import SearchBar from "../components/SearchBar/SearchBar";
-import { InjectedProps } from "../HOCs/WithLocalPersistence/WithLocalPersistence";
-import CardsContainer from "../components/CardsContainer/CardsContainer";
+import WithLocalPersistence from "../../HOCs/WithLocalPersistence/WithLocalPersistence";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import { InjectedProps } from "../../HOCs/WithLocalPersistence/WithLocalPersistence";
+import CardsContainer from "../../components/CardsContainer/CardsContainer";
 
-import { products } from "../data.json";
+import { products } from "../../data.json";
 
 type MainState = {
   value: string;

@@ -9,7 +9,7 @@ class NotFound extends Component<Record<string, never>, Record<string, never>> {
             Sorry, page not found..
           </h1>
           <img
-            src="../../public/404.jpg"
+            src="../../../public/404.jpg"
             className="not-found-img"
             alt="not found page"
           />
