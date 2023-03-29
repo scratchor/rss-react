@@ -1,0 +1,56 @@
+.submit-btn {
+  height: 30px;
+}
+
+fieldset {
+  background-color: #eeeeee;
+  margin: 50px 0;
+
+  &:last-of-type{
+    margin-bottom: 30px;
+  }
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+
+label {
+  margin: auto;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  text-align: left;
+}
+
+input, select {
+  height: 24px;
+  width: 300px;
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  label {
+    width: 400px;
+  }
+
+  input, select {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  label {
+    width: 350px;
+  }
+
+  input, select {
+    width: 200px;
+  }
+}
